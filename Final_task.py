@@ -4,10 +4,11 @@ import pandas as pd
 import sqlite3
 
 # Файл сохраняется локально на ПК, изучаем глазами, данные из него кладём в таблицу базы данных и дальше работаем с ней
-# Путь
+# Путь к файлу
 file_path = r'D:\PythonProject\Steam_2024_bestRevenue_1500.csv'
 # Загрузка данных из CSV файла
 data = pd.read_csv(file_path)
+
 # Удаление столбца 'steamId', как ненужного для анализа
 data_cleaned = data.drop(columns=['steamId'])
 # Подключение к базе данных SQLite
